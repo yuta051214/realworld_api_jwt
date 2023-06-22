@@ -1,0 +1,19 @@
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+/Users/kimurayuta/.rbenv/versions/3.2.1/bin/ruby -I /Users/kimurayuta/.rbenv/versions/3.2.1/lib/ruby/site_ruby/3.2.0 extconf.rb
+creating Makefile
+
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230622-62563-7sv2ny sitelibdir\=./.gem.20230622-62563-7sv2ny clean
+
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230622-62563-7sv2ny sitelibdir\=./.gem.20230622-62563-7sv2ny
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230622-62563-7sv2ny sitelibdir\=./.gem.20230622-62563-7sv2ny install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20230622-62563-7sv2ny/bootsnap
+
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.16.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20230622-62563-7sv2ny sitelibdir\=./.gem.20230622-62563-7sv2ny clean

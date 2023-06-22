@@ -1,0 +1,42 @@
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/msgpack-1.7.1/ext/msgpack
+/Users/kimurayuta/.rbenv/versions/3.2.1/bin/ruby -I /Users/kimurayuta/.rbenv/versions/3.2.1/lib/ruby/site_ruby/3.2.0 extconf.rb
+checking for ruby/st.h... yes
+checking for st.h... no
+checking for rb_enc_interned_str() in ruby.h... yes
+checking for rb_hash_new_capa() in ruby.h... yes
+checking for whether -fvisibility=hidden is accepted as CFLAGS... yes
+checking for whether -I.. is accepted as CFLAGS... yes
+checking for whether -Wall is accepted as CFLAGS... yes
+checking for whether -O3 is accepted as CFLAGS... yes
+checking for whether -std=gnu99 is accepted as CFLAGS... yes
+checking for whether -ggdb3 is accepted as CFLAGS... yes
+checking for whether -DHASH_ASET_DEDUPE=1 is accepted as CFLAGS... yes
+checking for whether -DSTR_UMINUS_DEDUPE_FROZEN=1 is accepted as CFLAGS... yes
+creating Makefile
+
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/msgpack-1.7.1/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230622-62563-ancmcf sitelibdir\=./.gem.20230622-62563-ancmcf clean
+
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/msgpack-1.7.1/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230622-62563-ancmcf sitelibdir\=./.gem.20230622-62563-ancmcf
+compiling buffer.c
+compiling buffer_class.c
+compiling extension_value_class.c
+compiling factory_class.c
+compiling packer.c
+compiling packer_class.c
+compiling packer_ext_registry.c
+compiling rbinit.c
+compiling rmem.c
+compiling unpacker.c
+compiling unpacker_class.c
+compiling unpacker_ext_registry.c
+linking shared-object msgpack/msgpack.bundle
+ld: warning: -undefined dynamic_lookup may not work with chained fixups
+
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/msgpack-1.7.1/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230622-62563-ancmcf sitelibdir\=./.gem.20230622-62563-ancmcf install
+/usr/bin/install -c -m 0755 msgpack.bundle ./.gem.20230622-62563-ancmcf/msgpack
+
+current directory: /Users/kimurayuta/Desktop/rails_workspace/jwt_practice/realworld_api_jwt/vendor/bundle/ruby/3.2.0/gems/msgpack-1.7.1/ext/msgpack
+make DESTDIR\= sitearchdir\=./.gem.20230622-62563-ancmcf sitelibdir\=./.gem.20230622-62563-ancmcf clean
