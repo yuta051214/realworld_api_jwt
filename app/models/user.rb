@@ -6,7 +6,7 @@ class User < ApplicationRecord
   validates :username, :email, :password, presence: true
   validates :email, :username, uniqueness: true, on: :create
 
-  # has_many :articles, dependent: :destroy
+  has_many :articles, dependent: :destroy
 
   #* as_jsonメソッドをオーバーライドして、UserオブジェクトをJSON形式にシリアライズする際にカスタマイザされた形式で出力するようにしている。
   def as_json(options = {})
