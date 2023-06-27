@@ -1,0 +1,50 @@
+#* workflow(このファイルそのもの) > job(複数のstepで構成) > step(最小単位)
+name: Test and Deploy
+
+on:
+  pull_request:    # プルリクエスト作成時、プルリクエストへ追加でコミットをプッシュした時
+  push:            # mainブランチへのプッシュ、またはプルリクエストのマージ時
+    branches:
+      - main
+
+# job
+jobs:
+  # テスト・ジョブ
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    # step
+    steps:
+      - uses: actions/checkout@v2    # GitHubの仮想マシン環境にコードをチェックアウト(クローン)する
+
+      - uses: ruby/setup-ruby@v1    # Ruby公式のアクション
+        with:
+          ruby-version: 2.6.8
+
+      - name: Cache bundle    # Gemのキャッシュ
+        uses: actions/cache@v2
+        with:
+          path: vendor/bundle
+          key: bundle-v1-${{ hashFiles('Gemfile.lock') }}
+
+      - uses: actions/setup-node@v2   #node.js
+        with:
+          node-version: 16
+
+      - name: Run bundle install    # stepの名前。Gemをインストールする。
+        run: |
+          bundle config --local path vendor/bundle
+          bundle config --local without production
+          bundle install
+
+      - name: Cache yarn    # node-modulesのキャッシュ
+        uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: yarn-v1-${{ hashFiles('yarn.lock') }}
+
+      # アセットのコンパイル
+      - run: RAILS_ENV=test bundle exec rails assets:precompile
+
+      # ビルド(Gemのインストール、アセットのコンパイル)が終わったのでテストを実行する
+      - run: bundle exec rspec
