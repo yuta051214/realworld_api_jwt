@@ -19,7 +19,7 @@ jobs:
 
       - uses: ruby/setup-ruby@v1    # Ruby公式のアクション
         with:
-          ruby-version: 2.6.8
+          ruby-version: 3.2.1
 
       - name: Cache bundle    # Gemのキャッシュ
         uses: actions/cache@v2
