@@ -48,3 +48,7 @@ jobs:
 
       # ビルド(Gemのインストール、アセットのコンパイル)が終わったのでテストを実行する
       - run: bundle exec rspec
+
+      # Rubocopによる静的解析を実行する
+      - name: Run Rubocop
+        run: bundle exec rubocop
