@@ -9,14 +9,14 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    render_article
+    render_article(status: :ok)
   end
 
   def create
     @article = @current_user.articles.new(article_params)
 
     if @article.save
-      render_article
+      render_article(status: :created)
     else
       render json: @article.errors, status: :unprocessable_entity
     end
@@ -52,12 +52,12 @@ class ArticlesController < ApplicationController
     @article = Article.find_by_slug(params[:slug])
   end
 
-  def render_article
-    render json: { article: @article.as_json({}, @current_user) }
+  def render_article(status: :ok)
+    render json: { article: @article.as_json({}, @current_user) }, status: status
   end
 
   def render_articles
-    render json: { articles: @articles, articlesCount: @articles.count }
+    render json: { articles: @articles, articlesCount: @articles.count }, status: :ok
   end
 
 end
